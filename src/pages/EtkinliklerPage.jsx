@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, MapPin, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, MapPin } from 'lucide-react';
 import { events } from '../data/siteData';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -64,13 +64,6 @@ export default function EtkinliklerPage() {
                       <span className="text-xs text-gray-500">{ev.location}</span>
                     </div>
                     <p className="text-xs text-gray-500 leading-snug flex-1">{ev.desc}</p>
-                    <a
-                      href="#"
-                      className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-forest-600 hover:bg-forest-700 px-3 py-1.5 rounded-lg transition-colors w-fit"
-                    >
-                      <CheckCircle2 className="w-3 h-3" />
-                      Katılacağım
-                    </a>
                   </div>
                 </div>
               </article>

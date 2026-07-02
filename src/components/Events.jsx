@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, MapPin, CheckCircle2, X } from 'lucide-react';
+import { ArrowRight, MapPin, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { events } from '../data/siteData';
 
@@ -68,13 +68,6 @@ export default function Events() {
                 <span className="text-xs text-gray-500">{ev.location}</span>
               </div>
               <p className="text-xs text-gray-500 leading-snug mb-2">{ev.desc}</p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-forest-600 hover:bg-forest-700 px-3 py-1.5 rounded-lg transition-colors"
-              >
-                <CheckCircle2 className="w-3 h-3" />
-                Katılacağım
-              </a>
             </div>
           </article>
         ))}
