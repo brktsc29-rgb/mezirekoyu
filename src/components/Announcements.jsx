@@ -33,7 +33,7 @@ function AidatIllustration() {
 function TaziyeIllustration() {
   return (
     <div className="h-28 overflow-hidden">
-      <img src="/images/taziye.png" alt="Başınız Sağ Olsun" className="w-full h-full object-cover" />
+      <img src="/images/taziye.jpg" alt="Başınız Sağ Olsun" className="w-full h-full object-cover" />
     </div>
   );
 }
@@ -118,7 +118,7 @@ export default function Announcements() {
             ) : (
               <div
                 className="cursor-zoom-in"
-                onClick={() => setLightbox({ src: '/images/taziye.png', alt: 'Başınız Sağ Olsun' })}
+                onClick={() => setLightbox({ src: '/images/taziye.jpg', alt: 'Başınız Sağ Olsun' })}
               >
                 <TaziyeIllustration />
               </div>

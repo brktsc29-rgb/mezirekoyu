@@ -48,8 +48,15 @@ function load(key, fallback) {
 }
 
 function save(key, value) {
-  try { localStorage.setItem(key, JSON.stringify(value)); }
-  catch (e) { console.error('localStorage hatası', e); }
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) {
+    if (e.name === 'QuotaExceededError') {
+      alert('Depolama alanı doldu. Lütfen bazı görselleri kaldırın veya daha küçük görsel kullanın.');
+    } else {
+      console.error('localStorage hatası', e);
+    }
+  }
 }
 
 export function fileToBase64(file) {

@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, Eye, EyeOff } from 'lucide-react';
 
-const DEFAULT_PASSWORD = 'mezire2026';
+const DEFAULT_HASH = '7a4e5c2d8f1b3e6a9c0d2f4b8e1a3c5d7f9b2e4a6c8d0f2b4e6a8c0d2f4b6e8'; // placeholder, ilk girişte üretilir
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
 
 export default function AdminLogin() {
   const [password, setPassword] = useState('');
@@ -10,10 +15,19 @@ export default function AdminLogin() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const stored = localStorage.getItem('adminPassword') ?? DEFAULT_PASSWORD;
-    if (password === stored) {
+    const inputHash = await sha256(password);
+    let storedHash = localStorage.getItem('adminPasswordHash');
+
+    // İlk giriş: default şifre henüz hash'lenmemişse hash'le ve kaydet
+    if (!storedHash) {
+      const defaultHash = await sha256('mezire2026');
+      localStorage.setItem('adminPasswordHash', defaultHash);
+      storedHash = defaultHash;
+    }
+
+    if (inputHash === storedHash) {
       sessionStorage.setItem('adminAuth', '1');
       navigate('/admin/panel');
     } else {

@@ -474,17 +474,25 @@ function YonetimSection() {
   );
 }
 
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 /* ── ŞİFRE ── */
 function SifreSection() {
   const [form, setForm] = useState({ current: '', next: '', confirm: '' });
   const [msg, setMsg] = useState(null);
 
-  const save = () => {
-    const stored = localStorage.getItem('adminPassword') ?? 'mezire2026';
-    if (form.current !== stored) { setMsg({ type: 'error', text: 'Mevcut şifre yanlış.' }); return; }
+  const save = async () => {
+    const currentHash = await sha256(form.current);
+    let storedHash = localStorage.getItem('adminPasswordHash');
+    if (!storedHash) storedHash = await sha256('mezire2026');
+    if (currentHash !== storedHash) { setMsg({ type: 'error', text: 'Mevcut şifre yanlış.' }); return; }
     if (form.next.length < 6) { setMsg({ type: 'error', text: 'Yeni şifre en az 6 karakter olmalı.' }); return; }
     if (form.next !== form.confirm) { setMsg({ type: 'error', text: 'Şifreler eşleşmiyor.' }); return; }
-    localStorage.setItem('adminPassword', form.next);
+    const newHash = await sha256(form.next);
+    localStorage.setItem('adminPasswordHash', newHash);
     setForm({ current: '', next: '', confirm: '' });
     setMsg({ type: 'success', text: 'Şifre başarıyla değiştirildi.' });
   };

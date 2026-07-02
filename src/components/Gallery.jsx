@@ -30,6 +30,8 @@ export default function Gallery() {
             <img
               src={item.image}
               alt={item.alt}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             {/* Hover overlay */}
