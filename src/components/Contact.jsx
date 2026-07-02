@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from './SocialIcons';
 
 export default function Contact() {
@@ -10,8 +10,8 @@ export default function Contact() {
 
   return (
     <section id="iletisim" className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
-      <div className="grid lg:grid-cols-3 gap-8">
-        {/* Left */}
+      <div className="grid lg:grid-cols-2 gap-8">
+        {/* Sol – İletişim bilgileri */}
         <div>
           <h2 className="font-serif text-2xl font-bold text-forest-800 mb-2">İletişim</h2>
           <div className="w-12 h-1 bg-gold mb-6 rounded-full" />
@@ -69,56 +69,18 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Center – Map */}
-        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 min-h-[260px]">
+        {/* Sağ – Harita */}
+        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 min-h-[320px]">
           <iframe
             title="Mezire Köyü Derneği Konumu"
             src="https://maps.google.com/maps?q=41.0906634,28.9958851&output=embed&z=17"
             width="100%"
             height="100%"
-            style={{ minHeight: '260px', border: 0 }}
+            style={{ minHeight: '320px', border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-        </div>
-
-        {/* Right – Contact form */}
-        <div>
-          <h2 className="font-serif text-2xl font-bold text-forest-800 mb-2">Bize Ulaşın</h2>
-          <div className="w-12 h-1 bg-gold mb-6 rounded-full" />
-
-          <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid grid-cols-2 gap-3">
-              <input
-                type="text"
-                placeholder="Adınız Soyadınız"
-                className="col-span-2 sm:col-span-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest-300 focus:border-forest-400 bg-white"
-              />
-              <input
-                type="email"
-                placeholder="E-posta Adresiniz"
-                className="col-span-2 sm:col-span-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest-300 focus:border-forest-400 bg-white"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Konu"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest-300 focus:border-forest-400 bg-white"
-            />
-            <textarea
-              rows={4}
-              placeholder="Mesajınız"
-              className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest-300 focus:border-forest-400 bg-white resize-none"
-            />
-            <button
-              type="submit"
-              className="w-full flex items-center justify-center gap-2 bg-forest-700 hover:bg-forest-800 text-white py-2.5 rounded-lg font-medium text-sm transition-all shadow-md"
-            >
-              Gönder
-              <Send className="w-4 h-4" />
-            </button>
-          </form>
         </div>
       </div>
     </section>
