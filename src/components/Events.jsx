@@ -1,9 +1,29 @@
-import { ArrowRight, MapPin, CheckCircle2 } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, MapPin, CheckCircle2, X } from 'lucide-react';
 import { events } from '../data/siteData';
 
 export default function Events() {
+  const [lightbox, setLightbox] = useState(null);
+
   return (
     <div id="etkinlikler" className="w-full lg:w-80 shrink-0">
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors">
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={lightbox}
+            alt=""
+            className="max-w-full max-h-[90vh] rounded-xl shadow-2xl object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
       <div className="flex items-center justify-between mb-5">
         <h2 className="font-serif text-2xl font-bold text-forest-800">Yaklaşan Etkinlikler</h2>
         <a href="#" className="text-sm text-forest-600 hover:text-forest-800 font-medium flex items-center gap-1 transition-colors">
@@ -28,7 +48,10 @@ export default function Events() {
             <div className="flex-1 p-3">
               {/* Görsel */}
               {ev.image ? (
-                <div className="h-20 rounded-lg overflow-hidden mb-2">
+                <div
+                  className="h-20 rounded-lg overflow-hidden mb-2 cursor-zoom-in"
+                  onClick={() => setLightbox(ev.image)}
+                >
                   <img
                     src={ev.image}
                     alt={ev.imageAlt}

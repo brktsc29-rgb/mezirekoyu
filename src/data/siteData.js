@@ -91,18 +91,6 @@ export const events = [
     imageAlt: 'Geleneksel Köy Piknik Buluşması afişi',
     gradient: 'from-green-700 to-green-500',
   },
-  {
-    id: 2,
-    day: '15',
-    month: 'HAZİRAN',
-    year: '2024',
-    title: 'Yaz Şenliği ve Eğlencesi',
-    location: 'Mezire Köyü Meydanı',
-    desc: 'Müzik, oyunlar ve sürpriz etkinliklerle dolu eğlenceli bir gün!',
-    image: null,
-    imageAlt: '',
-    gradient: 'from-orange-700 to-orange-500',
-  },
 ];
 
 export const villageCards = [
