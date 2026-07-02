@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight, MapPin, CheckCircle2, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { events } from '../data/siteData';
 
 export default function Events() {
@@ -26,9 +27,9 @@ export default function Events() {
       )}
       <div className="flex items-center justify-between mb-5">
         <h2 className="font-serif text-2xl font-bold text-forest-800">Yaklaşan Etkinlikler</h2>
-        <a href="#" className="text-sm text-forest-600 hover:text-forest-800 font-medium flex items-center gap-1 transition-colors">
+        <Link to="/etkinlikler" className="text-sm text-forest-600 hover:text-forest-800 font-medium flex items-center gap-1 transition-colors">
           Tüm Etkinlikler <ArrowRight className="w-3 h-3" />
-        </a>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-4">
