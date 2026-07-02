@@ -11,9 +11,7 @@ export const navLinks = [
 
 export const stats = [
   { value: '250+', label: 'Üye', icon: 'Users' },
-  { value: '35+', label: 'Etkinlik', icon: 'Calendar' },
   { value: '1998', label: 'Kuruluş', icon: 'Award' },
-  { value: '12', label: 'Proje', icon: 'Heart' },
 ];
 
 export const quickLinks = [
