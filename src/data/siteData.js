@@ -143,10 +143,9 @@ export const villageCards = [
 ];
 
 export const boardMembers = [
-  { name: 'Mehmet Yılmaz', role: 'Başkan', initials: 'MY', color: 'from-forest-600 to-forest-800' },
-  { name: 'Ahmet Demir', role: 'Başkan Yardımcısı', initials: 'AD', color: 'from-earth to-amber-800' },
-  { name: 'Seda Kalkan', role: 'Sekreter', initials: 'SK', color: 'from-burgundy to-red-900' },
-  { name: 'İsmail Kaya', role: 'Sayman', initials: 'İK', color: 'from-forest-500 to-forest-700' },
+  { name: 'Bayram Taşcı', role: 'Başkan', initials: 'BT', color: 'from-forest-600 to-forest-800', image: '/images/board-baskan.jpg' },
+  { name: 'Hikmet Taşcı', role: 'Üye', initials: 'HT', color: 'from-earth to-amber-800', image: null },
+  { name: 'Musa Şenel', role: 'Üye', initials: 'MŞ', color: 'from-forest-500 to-forest-700', image: null },
 ];
 
 export const galleryItems = [
