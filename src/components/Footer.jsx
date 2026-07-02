@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="border-t border-forest-700 pt-4 text-center">
           <p className="text-xs text-green-400">
-            © 2024 Mezire Köyü Derneği. Tüm hakları saklıdır.
+            © 2026 Mezire Köyü Derneği. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

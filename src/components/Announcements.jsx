@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { announcements } from '../data/siteData';
 
 function AidatIllustration() {
@@ -22,7 +23,7 @@ function AidatIllustration() {
         <circle cx="70" cy="28" r="5" fill="#fcd34d" opacity="0.5"/>
         <circle cx="130" cy="26" r="5" fill="#fcd34d" opacity="0.5"/>
         <rect x="60" y="90" width="80" height="16" rx="8" fill="#d97706" opacity="0.3"/>
-        <text x="100" y="102" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#92400e">2024 YILI AİDAT</text>
+        <text x="100" y="102" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#92400e">2026 YILI AİDAT</text>
       </svg>
     </div>
   );
@@ -30,21 +31,8 @@ function AidatIllustration() {
 
 function TaziyeIllustration() {
   return (
-    <div className="h-28 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden">
-      <svg viewBox="0 0 200 112" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-        <rect width="200" height="112" fill="#f1f5f9"/>
-        <ellipse cx="100" cy="75" rx="6" ry="28" fill="#94a3b8"/>
-        <ellipse cx="86" cy="65" rx="12" ry="5" fill="#94a3b8" opacity="0.6" transform="rotate(-30 86 65)"/>
-        <ellipse cx="114" cy="65" rx="12" ry="5" fill="#94a3b8" opacity="0.6" transform="rotate(30 114 65)"/>
-        <ellipse cx="100" cy="42" rx="14" ry="18" fill="#cbd5e1"/>
-        <ellipse cx="100" cy="36" rx="8" ry="6" fill="#e2e8f0"/>
-        <ellipse cx="62" cy="82" rx="4" ry="18" fill="#94a3b8" opacity="0.7"/>
-        <ellipse cx="62" cy="58" rx="10" ry="13" fill="#cbd5e1" opacity="0.8"/>
-        <ellipse cx="138" cy="82" rx="4" ry="18" fill="#94a3b8" opacity="0.7"/>
-        <ellipse cx="138" cy="58" rx="10" ry="13" fill="#cbd5e1" opacity="0.8"/>
-        <rect x="30" y="94" width="140" height="3" rx="2" fill="#94a3b8" opacity="0.4"/>
-        <text x="100" y="108" textAnchor="middle" fontSize="8" fill="#64748b">Başınız Sağ Olsun</text>
-      </svg>
+    <div className="h-28 overflow-hidden">
+      <img src="/images/taziye.png" alt="Başınız Sağ Olsun" className="w-full h-full object-cover" />
     </div>
   );
 }
@@ -99,9 +87,9 @@ export default function Announcements() {
 
       <div className="flex items-center justify-between mb-5">
         <h2 className="font-serif text-2xl font-bold text-forest-800">Güncel Duyurular</h2>
-        <a href="#" className="text-sm text-forest-600 hover:text-forest-800 font-medium flex items-center gap-1 transition-colors">
+        <Link to="/duyurular" className="text-sm text-forest-600 hover:text-forest-800 font-medium flex items-center gap-1 transition-colors">
           Tüm Duyurular <ArrowRight className="w-3 h-3" />
-        </a>
+        </Link>
       </div>
 
       <div className="grid sm:grid-cols-3 gap-4">
