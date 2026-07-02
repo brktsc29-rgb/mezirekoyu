@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import Lightbox from './Lightbox';
 
 export default function About() {
+  const [lightbox, setLightbox] = useState(false);
+
   return (
     <section id="dernegimiz" className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
       <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -29,11 +33,15 @@ export default function About() {
         </div>
 
         {/* Right – gerçek görsel */}
-        <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+        {lightbox && <Lightbox src="/images/about.jpg" alt="Mezire Köyü çocuk parkı ve köy manzarası" onClose={() => setLightbox(false)} />}
+        <div
+          className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] cursor-zoom-in"
+          onClick={() => setLightbox(true)}
+        >
           <img
             src="/images/about.jpg"
             alt="Mezire Köyü çocuk parkı ve köy manzarası"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
         </div>
       </div>

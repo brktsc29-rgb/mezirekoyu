@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { announcements } from '../data/siteData';
+import Lightbox from './Lightbox';
 
 function AidatIllustration() {
   return (
@@ -80,10 +81,12 @@ function AnnouncementModal({ item, onClose }) {
 
 export default function Announcements() {
   const [selected, setSelected] = useState(null);
+  const [lightbox, setLightbox] = useState(null);
 
   return (
     <div id="duyurular" className="flex-1 min-w-0">
       {selected && <AnnouncementModal item={selected} onClose={() => setSelected(null)} />}
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
 
       <div className="flex items-center justify-between mb-5">
         <h2 className="font-serif text-2xl font-bold text-forest-800">Güncel Duyurular</h2>
@@ -99,7 +102,10 @@ export default function Announcements() {
             className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-gray-100 flex flex-col"
           >
             {item.image ? (
-              <div className="h-28 overflow-hidden">
+              <div
+                className="h-28 overflow-hidden cursor-zoom-in"
+                onClick={() => setLightbox({ src: item.image, alt: item.imageAlt })}
+              >
                 <img
                   src={item.image}
                   alt={item.imageAlt}

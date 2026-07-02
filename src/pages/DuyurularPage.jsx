@@ -5,6 +5,7 @@ import { announcements } from '../data/siteData';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import Lightbox from '../components/Lightbox';
 
 function AidatIllustration() {
   return (
@@ -71,6 +72,7 @@ function AnnouncementModal({ item, onClose }) {
 
 export default function DuyurularPage() {
   const [selected, setSelected] = useState(null);
+  const [lightbox, setLightbox] = useState(null);
 
   return (
     <>
@@ -92,7 +94,10 @@ export default function DuyurularPage() {
             {announcements.map((item) => (
               <article key={item.id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-gray-100 flex flex-col">
                 {item.image ? (
-                  <div className="h-48 overflow-hidden">
+                  <div
+                    className="h-48 overflow-hidden cursor-zoom-in"
+                    onClick={() => setLightbox({ src: item.image, alt: item.imageAlt })}
+                  >
                     <img src={item.image} alt={item.imageAlt} className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300" />
                   </div>
                 ) : item.category === 'AİDAT' ? (
@@ -122,6 +127,7 @@ export default function DuyurularPage() {
       <Footer />
       <WhatsAppButton />
       {selected && <AnnouncementModal item={selected} onClose={() => setSelected(null)} />}
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
     </>
   );
 }

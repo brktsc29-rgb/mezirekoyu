@@ -1,8 +1,13 @@
+import { useState } from 'react';
 import { boardMembers } from '../data/siteData';
+import Lightbox from './Lightbox';
 
 export default function BoardMembers() {
+  const [lightbox, setLightbox] = useState(null);
+
   return (
     <div className="flex-1 min-w-0">
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
       <h2 className="font-serif text-2xl font-bold text-forest-800 mb-2">Yönetim Kurulu</h2>
       <div className="w-12 h-1 bg-gold mb-6 rounded-full" />
 
@@ -10,7 +15,10 @@ export default function BoardMembers() {
         {boardMembers.map((member, i) => (
           <div key={i} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-all">
             {member.image ? (
-              <div className="w-16 h-16 rounded-full overflow-hidden mb-3 shadow-md">
+              <div
+                className="w-16 h-16 rounded-full overflow-hidden mb-3 shadow-md cursor-zoom-in"
+                onClick={() => setLightbox({ src: member.image, alt: member.name })}
+              >
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
               </div>
             ) : (

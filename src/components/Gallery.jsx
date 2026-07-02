@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { galleryItems } from '../data/siteData';
+import Lightbox from './Lightbox';
 
 export default function Gallery() {
+  const [lightbox, setLightbox] = useState(null);
+
   return (
     <section id="galeri" className="max-w-7xl mx-auto px-4 sm:px-6 py-14">
       <div className="flex items-center justify-between mb-6">
@@ -14,11 +18,14 @@ export default function Gallery() {
         </a>
       </div>
 
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
+
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
         {galleryItems.map((item) => (
           <div
             key={item.id}
-            className="group relative rounded-xl overflow-hidden aspect-square shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
+            className="group relative rounded-xl overflow-hidden aspect-square shadow-sm hover:shadow-lg transition-all duration-300 cursor-zoom-in"
+            onClick={() => setLightbox({ src: item.image, alt: item.alt })}
           >
             <img
               src={item.image}
