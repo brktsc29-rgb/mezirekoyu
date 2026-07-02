@@ -1,4 +1,4 @@
-import { ArrowRight, Image } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { galleryItems } from '../data/siteData';
 
 export default function Gallery() {
@@ -18,16 +18,19 @@ export default function Gallery() {
         {galleryItems.map((item) => (
           <div
             key={item.id}
-            className="group relative rounded-xl overflow-hidden aspect-square shadow-sm hover:shadow-lg transition-all cursor-pointer"
+            className="group relative rounded-xl overflow-hidden aspect-square shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer"
           >
-            <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient}`} />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center">
-              <Image className="w-8 h-8 text-white opacity-40 group-hover:opacity-80 transition-opacity" />
+            <img
+              src={item.image}
+              alt={item.alt}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            {/* Hover overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-all duration-300" />
+            {/* Label */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p className="text-white text-xs font-medium leading-tight">{item.label}</p>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-2 translate-y-full group-hover:translate-y-0 transition-transform">
-              <p className="text-white text-xs font-medium">{item.label}</p>
-            </div>
-            <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-300 bg-gradient-to-br opacity-80" />
           </div>
         ))}
       </div>

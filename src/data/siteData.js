@@ -150,12 +150,12 @@ export const boardMembers = [
 ];
 
 export const galleryItems = [
-  { id: 1, alt: 'Mezire Köyü manzarası', gradient: 'from-green-700 via-green-500 to-emerald-400', label: 'Köy Manzarası' },
-  { id: 2, alt: 'Eski köy fotoğrafı', gradient: 'from-gray-600 via-gray-400 to-gray-300', label: 'Tarihi Fotoğraf' },
-  { id: 3, alt: 'Dernek buluşması', gradient: 'from-forest-700 via-forest-500 to-green-400', label: 'Dernek Buluşması' },
-  { id: 4, alt: 'Yayla doğası', gradient: 'from-emerald-700 via-teal-500 to-green-400', label: 'Yayla & Doğa' },
-  { id: 5, alt: 'İç mekân toplantı', gradient: 'from-amber-800 via-amber-600 to-yellow-500', label: 'Toplantı' },
-  { id: 6, alt: 'Dere ve orman', gradient: 'from-cyan-700 via-teal-500 to-emerald-400', label: 'Dere & Orman' },
+  { id: 1, alt: 'Mezire Köyü genel manzarası ve cami minaresi', label: 'Köy Manzarası', image: '/images/gallery-1.jpg' },
+  { id: 2, alt: 'Mezire çevresi dağ ve vadi doğası', label: 'Dağ & Vadi', image: '/images/gallery-2.jpg' },
+  { id: 3, alt: 'Mezire orman eteklerinde bağ evi', label: 'Orman & Bağ Evi', image: '/images/gallery-3.jpg' },
+  { id: 4, alt: 'Mezire deresi ve doğal şelale', label: 'Dere & Şelale', image: '/images/gallery-4.jpg' },
+  { id: 5, alt: 'Mezire köyü merası ve hayvanlar', label: 'Mera & Hayvancılık', image: '/images/gallery-5.jpg' },
+  { id: 6, alt: 'Geleneksel Köy Piknik Buluşması', label: 'Piknik Buluşması', image: '/images/event-piknik.jpg' },
 ];
 
 export const socialLinks = [
