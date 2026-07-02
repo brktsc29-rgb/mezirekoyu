@@ -24,7 +24,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-700">Adres</p>
-                <p className="text-sm text-gray-500">Mezire Mahallesi, Arzular Beldesi<br />Gümüşhane</p>
+                <p className="text-sm text-gray-500">Sultan Selim, Bayram Sk. No:3<br />34415 Kağıthane / İstanbul</p>
               </div>
             </div>
             <div className="flex gap-3">
@@ -74,7 +74,7 @@ export default function Contact() {
         <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 min-h-[260px]">
           <iframe
             title="Mezire Köyü Derneği Konumu"
-            src="https://maps.google.com/maps?q=Mezire+Mahallesi,+Arzular+Beldesi,+G%C3%BCm%C3%BC%C5%9Fhane&output=embed&z=15"
+            src="https://maps.google.com/maps?q=41.0906634,28.9958851&output=embed&z=17"
             width="100%"
             height="100%"
             style={{ minHeight: '260px', border: 0 }}
