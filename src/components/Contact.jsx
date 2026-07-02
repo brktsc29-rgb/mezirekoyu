@@ -6,7 +6,7 @@ export default function Contact() {
     { Icon: FacebookIcon, href: '#', color: 'bg-blue-600', label: 'Facebook' },
     { Icon: InstagramIcon, href: '#', color: 'bg-pink-600', label: 'Instagram' },
     { Icon: YoutubeIcon, href: '#', color: 'bg-red-600', label: 'YouTube' },
-    { Icon: WhatsAppIcon, href: 'https://wa.me/902121234567', color: 'bg-green-500', label: 'WhatsApp' },
+    { Icon: WhatsAppIcon, href: 'https://wa.me/905359870667', color: 'bg-green-500', label: 'WhatsApp' },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-700">Adres</p>
-                <p className="text-sm text-gray-500">Mezire Köyü Merkez Mah.<br />Sarıyer / İstanbul</p>
+                <p className="text-sm text-gray-500">Mezire Mahallesi, Arzular Beldesi<br />Gümüşhane</p>
               </div>
             </div>
             <div className="flex gap-3">
@@ -33,8 +33,8 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-700">Telefon</p>
-                <a href="tel:+902121234567" className="text-sm text-gray-500 hover:text-forest-600">
-                  0 (212) 123 45 67
+                <a href="tel:+905359870667" className="text-sm text-gray-500 hover:text-forest-600">
+                  +90 535 987 06 67
                 </a>
               </div>
             </div>
@@ -70,29 +70,18 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Center – Map placeholder */}
-        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 bg-gray-50 min-h-[260px] flex items-center justify-center relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-blue-50" />
-          <div className="absolute inset-0 opacity-20">
-            <svg viewBox="0 0 400 300" className="w-full h-full">
-              {[0,1,2,3,4,5,6,7].map(i => (
-                <line key={`h${i}`} x1="0" y1={i*40} x2="400" y2={i*40} stroke="#94a3b8" strokeWidth="0.5"/>
-              ))}
-              {[0,1,2,3,4,5,6,7,8,9].map(i => (
-                <line key={`v${i}`} x1={i*45} y1="0" x2={i*45} y2="300" stroke="#94a3b8" strokeWidth="0.5"/>
-              ))}
-              <path d="M60,160 Q120,120 200,140 Q280,160 340,130" stroke="#94a3b8" strokeWidth="2" fill="none"/>
-              <rect x="160" y="100" width="80" height="60" rx="4" fill="#d1fae5" stroke="#86efac"/>
-              <rect x="100" y="140" width="50" height="40" rx="3" fill="#dbeafe" stroke="#93c5fd"/>
-            </svg>
-          </div>
-          <div className="relative z-10 text-center">
-            <div className="w-10 h-10 bg-burgundy rounded-full flex items-center justify-center mx-auto mb-2 shadow-lg">
-              <MapPin className="w-5 h-5 text-white" />
-            </div>
-            <p className="text-sm font-semibold text-gray-700">Mezire Köyü Derneği</p>
-            <p className="text-xs text-gray-500">Sarıyer / İstanbul</p>
-          </div>
+        {/* Center – Map */}
+        <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 min-h-[260px]">
+          <iframe
+            title="Mezire Köyü Derneği Konumu"
+            src="https://maps.google.com/maps?q=Mezire+Mahallesi,+Arzular+Beldesi,+G%C3%BCm%C3%BC%C5%9Fhane&output=embed&z=15"
+            width="100%"
+            height="100%"
+            style={{ minHeight: '260px', border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
 
         {/* Right – Contact form */}
