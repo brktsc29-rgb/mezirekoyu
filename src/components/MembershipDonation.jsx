@@ -19,22 +19,22 @@ export default function MembershipDonation() {
         <dl className="space-y-2 text-sm">
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">IBAN</dt>
-            <dd className="font-mono text-xs text-gray-700 font-medium">TR12 0001 0021 4567 8901 2345 67</dd>
+            <dd className="font-mono text-xs text-gray-700 font-medium">TR59 0001 2009 8400 0016 0000 39</dd>
           </div>
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">Hesap Adı</dt>
-            <dd className="text-gray-700">Mezire Köyü Derneği</dd>
+            <dd className="text-gray-700 text-xs leading-snug">Gümüşhane İli Arzular Beldesi Mezire Mahallesi Yardımlaşma ve Dayanışma Derneği</dd>
           </div>
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">Banka</dt>
-            <dd className="text-gray-700">Ziraat Bankası – Sarıyer Şubesi</dd>
+            <dd className="text-gray-700">Ziraat Bankası</dd>
           </div>
         </dl>
       </div>
 
       <div className="flex items-center gap-4">
         <a
-          href="https://wa.me/902121234567"
+          href="https://wa.me/905359870667"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2.5 rounded-xl font-medium text-sm transition-all shadow-md"
