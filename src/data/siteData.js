@@ -55,7 +55,8 @@ export const announcements = [
     date: '28 Mayıs 2024',
     title: 'Geleneksel Köy Pikniğimiz',
     text: 'Her yıl düzenlediğimiz Geleneksel Köy Pikniğimiz 26 Mayıs Pazar günü gerçekleşecektir.',
-    gradient: 'from-green-800 to-green-600',
+    image: '/images/announcement-etkinlik.jpg',
+    imageAlt: 'Dernek yönetimi buluşması',
   },
   {
     id: 2,
@@ -64,7 +65,8 @@ export const announcements = [
     date: '15 Mayıs 2024',
     title: '2024 Yılı Aidat Güncellemesi',
     text: '2024 yılı üyelik aidatlarımız belirlenmiş olup, katkılarınız için teşekkür ederiz.',
-    gradient: 'from-amber-800 to-amber-600',
+    image: null,
+    imageAlt: '',
   },
   {
     id: 3,
@@ -73,19 +75,22 @@ export const announcements = [
     date: '10 Mayıs 2024',
     title: 'Başsağlığı Mesajı',
     text: "Köyümüzden Ahmet Yılmaz'ın vefatını derin üzüntüyle öğrenmiş bulunuyoruz. Ailesine ve yakınlarına sabırlar dileriz.",
-    gradient: 'from-gray-700 to-gray-500',
+    image: null,
+    imageAlt: '',
   },
 ];
 
 export const events = [
   {
     id: 1,
-    day: '26',
-    month: 'MAYIS',
-    year: '2024',
+    day: '19',
+    month: 'TEMMUZ',
+    year: '2026',
     title: 'Geleneksel Köy Pikniği',
     location: 'Mezire Köyü Mesire Alanı',
     desc: 'Tüm köy halkımızın katılımıyla düzenlenecek geleneksel pikniğimize davetlisiniz.',
+    image: '/images/event-piknik.jpg',
+    imageAlt: 'Geleneksel Köy Piknik Buluşması afişi',
     gradient: 'from-green-700 to-green-500',
   },
   {
@@ -96,6 +101,8 @@ export const events = [
     title: 'Yaz Şenliği ve Eğlencesi',
     location: 'Mezire Köyü Meydanı',
     desc: 'Müzik, oyunlar ve sürpriz etkinliklerle dolu eğlenceli bir gün!',
+    image: null,
+    imageAlt: '',
     gradient: 'from-orange-700 to-orange-500',
   },
 ];

@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin, CheckCircle2, Image } from 'lucide-react';
+import { ArrowRight, MapPin, CheckCircle2 } from 'lucide-react';
 import { events } from '../data/siteData';
 
 export default function Events() {
@@ -17,22 +17,30 @@ export default function Events() {
             key={ev.id}
             className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-gray-100 flex gap-0"
           >
-            {/* Date column */}
+            {/* Tarih kolonu */}
             <div className={`bg-gradient-to-b ${ev.gradient} text-white flex flex-col items-center justify-center px-4 py-3 min-w-[72px]`}>
               <span className="text-2xl font-bold leading-none">{ev.day}</span>
               <span className="text-xs font-medium mt-1 opacity-90">{ev.month}</span>
               <span className="text-xs opacity-70">{ev.year}</span>
             </div>
 
-            {/* Content */}
+            {/* İçerik */}
             <div className="flex-1 p-3">
-              {/* Small image */}
-              <div className={`h-16 rounded-lg bg-gradient-to-br ${ev.gradient} opacity-30 mb-2 flex items-center justify-center`}>
-                <Image className="w-5 h-5 text-white" />
-              </div>
+              {/* Görsel */}
+              {ev.image ? (
+                <div className="h-20 rounded-lg overflow-hidden mb-2">
+                  <img
+                    src={ev.image}
+                    alt={ev.imageAlt}
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ) : (
+                <div className={`h-16 rounded-lg bg-gradient-to-br ${ev.gradient} opacity-25 mb-2`} />
+              )}
               <h3 className="font-semibold text-gray-800 text-sm">{ev.title}</h3>
               <div className="flex items-center gap-1 mt-1 mb-1">
-                <MapPin className="w-3 h-3 text-gray-400" />
+                <MapPin className="w-3 h-3 text-gray-400 shrink-0" />
                 <span className="text-xs text-gray-500">{ev.location}</span>
               </div>
               <p className="text-xs text-gray-500 leading-snug mb-2">{ev.desc}</p>
