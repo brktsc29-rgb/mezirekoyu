@@ -50,13 +50,13 @@ export const quickLinks = [
 export const announcements = [
   {
     id: 1,
-    category: 'ETKİNLİK',
-    categoryColor: 'bg-forest-600',
-    date: '28 Mayıs 2024',
-    title: 'Geleneksel Köy Pikniğimiz',
-    text: 'Her yıl düzenlediğimiz Geleneksel Köy Pikniğimiz 26 Mayıs Pazar günü gerçekleşecektir.',
+    category: 'PROJE',
+    categoryColor: 'bg-forest-700',
+    date: '1 Temmuz 2024',
+    title: '1 Dönüm Mesire Alanı Projesi',
+    text: 'Köyümüze kazandırılacak 1000 m² mesire alanı projemiz hayata geçiyor. Spor sahası, çocuk parkı, kamelyalar ve yeşil alanlarla köyümüze değer katıyoruz.',
     image: '/images/announcement-etkinlik.jpg',
-    imageAlt: 'Dernek yönetimi buluşması',
+    imageAlt: '1 Dönüm Mesire Alanı projesi çizimi',
   },
   {
     id: 2,
