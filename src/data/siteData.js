@@ -72,7 +72,7 @@ export const announcements = [
     id: 3,
     category: 'TAZİYE',
     categoryColor: 'bg-gray-600',
-    date: '10 Mayıs 2024',
+    date: '5 Mayıs 2026',
     title: 'Havva Taşçı Vefat Haberi',
     text: "Beldemiz Mezire Mahallesi sakinlerinden rahmetli Eşref Taşçı'nın kızı, Merhum Bayram, Hamdi, İsmail, Alirıza, Salih ve Halil Taşçı'nın kardeşleri Havva Taşçı halamız Hollanda'da vefat etmiştir. Gölcük mezarlığına defnedilmiştir. Merhumeye Allah'tan rahmet, ailesine ve yakınlarına sabırlar dileriz.",
     image: null,
