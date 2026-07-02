@@ -27,7 +27,7 @@ export default function MembershipDonation() {
           </div>
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">Banka</dt>
-            <dd className="text-gray-700">Ziraat Bankası</dd>
+            <dd className="text-gray-700">Halkbank</dd>
           </div>
         </dl>
       </div>

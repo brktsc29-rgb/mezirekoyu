@@ -1,11 +1,10 @@
-import { FacebookIcon, InstagramIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
+import { FacebookIcon, InstagramIcon, WhatsAppIcon } from './SocialIcons';
 import { footerQuickLinks, footerLegal } from '../data/siteData';
 
 export default function Footer() {
   const socials = [
     { Icon: FacebookIcon, href: '#', color: 'bg-blue-600', label: 'Facebook' },
     { Icon: InstagramIcon, href: '#', color: 'bg-pink-600', label: 'Instagram' },
-    { Icon: YoutubeIcon, href: '#', color: 'bg-red-600', label: 'YouTube' },
     { Icon: WhatsAppIcon, href: 'https://wa.me/902121234567', color: 'bg-green-500', label: 'WhatsApp' },
   ];
 
