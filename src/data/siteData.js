@@ -145,7 +145,7 @@ export const galleryItems = [
 
 export const socialLinks = [
   { name: 'Facebook', icon: 'Facebook', href: '#', color: 'bg-blue-600 hover:bg-blue-700' },
-  { name: 'Instagram', icon: 'Instagram', href: '#', color: 'bg-pink-600 hover:bg-pink-700' },
+  { name: 'Instagram', icon: 'Instagram', href: 'https://www.instagram.com/29mezire?igsh=MWo2ZnhycDNza251dA==', color: 'bg-pink-600 hover:bg-pink-700' },
   { name: 'YouTube', icon: 'Youtube', href: '#', color: 'bg-red-600 hover:bg-red-700' },
   { name: 'WhatsApp', icon: 'MessageCircle', href: 'https://wa.me/905359870667', color: 'bg-green-500 hover:bg-green-600' },
 ];

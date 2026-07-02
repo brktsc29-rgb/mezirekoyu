@@ -4,7 +4,7 @@ import { FacebookIcon, InstagramIcon, YoutubeIcon, WhatsAppIcon } from './Social
 export default function Contact() {
   const socials = [
     { Icon: FacebookIcon, href: '#', color: 'bg-blue-600', label: 'Facebook' },
-    { Icon: InstagramIcon, href: '#', color: 'bg-pink-600', label: 'Instagram' },
+    { Icon: InstagramIcon, href: 'https://www.instagram.com/29mezire?igsh=MWo2ZnhycDNza251dA==', color: 'bg-pink-600', label: 'Instagram' },
     { Icon: YoutubeIcon, href: '#', color: 'bg-red-600', label: 'YouTube' },
     { Icon: WhatsAppIcon, href: 'https://wa.me/905359870667', color: 'bg-green-500', label: 'WhatsApp' },
   ];
