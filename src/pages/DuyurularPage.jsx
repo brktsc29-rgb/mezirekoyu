@@ -103,7 +103,12 @@ export default function DuyurularPage() {
                 ) : item.category === 'AİDAT' ? (
                   <AidatIllustration />
                 ) : (
-                  <TaziyeIllustration />
+                  <div
+                    className="cursor-zoom-in"
+                    onClick={() => setLightbox({ src: '/images/taziye.png', alt: 'Başınız Sağ Olsun' })}
+                  >
+                    <TaziyeIllustration />
+                  </div>
                 )}
                 <div className="p-5 flex flex-col flex-1">
                   <div className="flex items-center justify-between mb-2">

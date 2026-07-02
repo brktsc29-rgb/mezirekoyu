@@ -115,7 +115,12 @@ export default function Announcements() {
             ) : item.category === 'AİDAT' ? (
               <AidatIllustration />
             ) : (
-              <TaziyeIllustration />
+              <div
+                className="cursor-zoom-in"
+                onClick={() => setLightbox({ src: '/images/taziye.png', alt: 'Başınız Sağ Olsun' })}
+              >
+                <TaziyeIllustration />
+              </div>
             )}
 
             <div className="p-4 flex flex-col flex-1">
