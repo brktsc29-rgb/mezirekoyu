@@ -102,7 +102,7 @@ export default function Announcements() {
                 <span className="text-xs text-gray-400">{item.date}</span>
               </div>
               <h3 className="font-semibold text-gray-800 text-sm mb-1">{item.title}</h3>
-              <p className="text-xs text-gray-500 leading-relaxed flex-1">{item.text}</p>
+              <p className="text-xs text-gray-500 leading-relaxed flex-1 whitespace-pre-line">{item.text}</p>
               <a
                 href="#"
                 className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-forest-600 hover:text-forest-800 transition-colors"

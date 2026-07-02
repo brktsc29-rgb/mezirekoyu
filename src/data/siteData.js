@@ -64,7 +64,7 @@ export const announcements = [
     categoryColor: 'bg-earth',
     date: '15 Mayıs 2024',
     title: '2024 Yılı Aidat Güncellemesi',
-    text: '2024 yılı üyelik aidatlarımız belirlenmiş olup, katkılarınız için teşekkür ederiz.',
+    text: 'Değerli Hemşehrilerimiz,\n\nBirlik ve beraberliğimizi güçlendirmek adına derneğimizin aylık aidatı 25₺, yıllık aidatı ise 300₺ olarak belirlenmiştir.\n\nDesteklerinizle dayanışmamız büyümeye devam edecektir. Katkı sağlayan herkese gönülden teşekkür ederiz.\n\nAidat IBAN: TR59 0001 2009 8400 0016 0000 39\n\nGÜMÜŞHANE İLİ ARZULAR BELDESİ MEZİRE MAHALLESİ YARDIMLAŞMA VE DAYANIŞMA DERNEĞİ YÖNETİMİ',
     image: null,
     imageAlt: '',
   },
