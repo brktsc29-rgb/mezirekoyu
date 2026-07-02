@@ -7,9 +7,13 @@ export default function Hero() {
       className="relative min-h-[560px] sm:min-h-[640px] flex items-center overflow-hidden"
     >
       {/* Hero background image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/images/hero.jpg)' }}
+      <img
+        src="/images/hero.jpg"
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        decoding="sync"
+        className="absolute inset-0 z-0 w-full h-full object-cover object-center"
       />
 
       {/* Dark gradient overlay — sol soluk, yazı okunabilir */}
