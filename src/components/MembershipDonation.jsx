@@ -1,6 +1,8 @@
 import { WhatsAppIcon } from './SocialIcons';
+import { useData } from '../context/DataContext';
 
 export default function MembershipDonation() {
+  const { bankInfo } = useData();
   return (
     <div id="uyelik" className="w-full lg:w-96 shrink-0">
       <h2 className="font-serif text-2xl font-bold text-forest-800 mb-2">Üyelik ve Bağış</h2>
@@ -19,15 +21,15 @@ export default function MembershipDonation() {
         <dl className="space-y-2 text-sm">
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">IBAN</dt>
-            <dd className="font-mono text-xs text-gray-700 font-medium">TR59 0001 2009 8400 0016 0000 39</dd>
+            <dd className="font-mono text-xs text-gray-700 font-medium">{bankInfo.iban}</dd>
           </div>
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">Hesap Adı</dt>
-            <dd className="text-gray-700 text-xs leading-snug">Gümüşhane İli Arzular Beldesi Mezire Mahallesi Yardımlaşma ve Dayanışma Derneği</dd>
+            <dd className="text-gray-700 text-xs leading-snug">{bankInfo.hesapAdi}</dd>
           </div>
           <div className="flex gap-2">
             <dt className="text-gray-400 w-20 shrink-0">Banka</dt>
-            <dd className="text-gray-700">Halkbank</dd>
+            <dd className="text-gray-700">{bankInfo.banka}</dd>
           </div>
         </dl>
       </div>

@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { boardMembers } from '../data/siteData';
+import { useData } from '../context/DataContext';
 import Lightbox from './Lightbox';
 
 export default function BoardMembers() {
+  const { boardMembers } = useData();
   const [lightbox, setLightbox] = useState(null);
 
   return (

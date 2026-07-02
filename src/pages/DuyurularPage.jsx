@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, X } from 'lucide-react';
-import { announcements } from '../data/siteData';
+import { useData } from '../context/DataContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
@@ -71,6 +71,7 @@ function AnnouncementModal({ item, onClose }) {
 }
 
 export default function DuyurularPage() {
+  const { announcements } = useData();
   const [selected, setSelected] = useState(null);
   const [lightbox, setLightbox] = useState(null);
 

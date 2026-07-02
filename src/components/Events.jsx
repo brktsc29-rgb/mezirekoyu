@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { ArrowRight, MapPin, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { events } from '../data/siteData';
+import { useData } from '../context/DataContext';
 
 export default function Events() {
+  const { events } = useData();
   const [lightbox, setLightbox] = useState(null);
 
   return (

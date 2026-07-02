@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { announcements } from '../data/siteData';
+import { useData } from '../context/DataContext';
 import Lightbox from './Lightbox';
 
 function AidatIllustration() {
@@ -80,6 +80,7 @@ function AnnouncementModal({ item, onClose }) {
 }
 
 export default function Announcements() {
+  const { announcements } = useData();
   const [selected, setSelected] = useState(null);
   const [lightbox, setLightbox] = useState(null);
 

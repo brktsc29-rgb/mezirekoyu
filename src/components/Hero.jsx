@@ -1,6 +1,8 @@
 import { UserPlus, CalendarDays } from 'lucide-react';
+import { useData } from '../context/DataContext';
 
 export default function Hero() {
+  const { heroImage } = useData();
   return (
     <section
       id="anasayfa"
@@ -8,7 +10,7 @@ export default function Hero() {
     >
       {/* Hero background image */}
       <img
-        src="/images/hero.jpg"
+        src={heroImage}
         alt=""
         aria-hidden="true"
         fetchPriority="high"

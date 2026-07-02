@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, MapPin } from 'lucide-react';
-import { events } from '../data/siteData';
+import { useData } from '../context/DataContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import Lightbox from '../components/Lightbox';
 
 export default function EtkinliklerPage() {
+  const { events } = useData();
   const [lightbox, setLightbox] = useState(null);
 
   return (
