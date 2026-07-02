@@ -1,4 +1,3 @@
-import { TreePine } from 'lucide-react';
 import { FacebookIcon, InstagramIcon, YoutubeIcon, WhatsAppIcon } from './SocialIcons';
 import { footerQuickLinks, footerLegal } from '../data/siteData';
 
@@ -24,8 +23,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-10">
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
-                <TreePine className="w-5 h-5 text-forest-900" />
+              <div className="w-10 h-10 rounded-full overflow-hidden bg-white shadow">
+                <img src="/images/logo.png" alt="Mezire Köyü Derneği Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-serif font-bold text-white text-sm leading-tight">
                 Mezire Köyü<br />Derneği
