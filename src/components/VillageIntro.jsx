@@ -28,6 +28,19 @@ export default function VillageIntro() {
           );
         })}
       </div>
+
+      <div className="mt-10">
+        <h3 className="font-serif text-xl font-bold text-forest-800 mb-4">Mezire'yi Keşfedin</h3>
+        <div className="rounded-2xl overflow-hidden shadow-xl aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/vEP_oZyFpQE?start=480&end=1020"
+            title="Mezire Köyü Tanıtım Videosu"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      </div>
     </section>
   );
 }
